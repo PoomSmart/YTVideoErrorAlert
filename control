@@ -1,0 +1,9 @@
+Package: com.ps.ytvideoerroralert
+Name: YTVideoErrorAlert
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Alert you with exact details when YouTube video error occurred.
+Maintainer: PoomSmart
+Author: PoomSmart
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.0)
