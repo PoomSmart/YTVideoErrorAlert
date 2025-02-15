@@ -1,5 +1,5 @@
 ARCHS = arm64
-PACKAGE_VERSION = 1.0.1
+PACKAGE_VERSION = 1.0.2
 ifeq ($(SIMULATOR),1)
 	TARGET = simulator:clang:latest:15.0
 else

@@ -1,9 +1,14 @@
+#import <UIKit/UIPasteboard.h>
 #import <YouTubeHeader/YTAlertView.h>
 
 static void displayError(NSError *error) {
-    YTAlertView *alertView = [%c(YTAlertView) infoDialog];
+    NSString *errorDescription = [error debugDescription];
+    YTAlertView *alertView = [%c(YTAlertView) confirmationDialogWithAction:^{
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = errorDescription;
+    } actionTitle:@"Copy"];
     alertView.title = @"Error";
-    alertView.subtitle = [error debugDescription];
+    alertView.subtitle = errorDescription;
     [alertView show];
 }
 
